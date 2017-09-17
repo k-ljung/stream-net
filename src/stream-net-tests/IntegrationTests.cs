@@ -70,7 +70,7 @@ namespace stream_net_tests
             Assert.AreEqual(response.Object, first.Object);
             Assert.AreEqual(response.Verb, first.Verb);
         }
-
+		/*
         [Test]
         public async Task TestAddActivityWithTime()
         {
@@ -1436,5 +1436,6 @@ namespace stream_net_tests
             Assert.AreEqual(newActivity.Object, first.Object);
             Assert.AreEqual(newActivity.Verb, first.Verb);
         }
+		*/
     }
 }
