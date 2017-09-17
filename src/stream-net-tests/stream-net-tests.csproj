@@ -6,10 +6,12 @@
     <TargetFrameworks>net461</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="coveralls.io" Version="1.4.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="NUnit" Version="3.8.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.8.0" />
+    <PackageReference Include="OpenCover" Version="4.6.519" />
     <ProjectReference Include="..\stream-net\stream-net.csproj">
       <Name>stream-net</Name>
     </ProjectReference>
