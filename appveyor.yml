@@ -10,4 +10,9 @@ build_script:
 - dotnet build .\src
 after_test:
 - cmd: >-
-    nuget locals global-packages -list
+    C:\Users\appveyor\.nuget\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:" C:\Users\appveyor\.nuget\packages\NUnit.Console.3.7.0\tools\nunit3-console.exe" -targetargs:"/domain:single  src\stream-net-tests\bin\debug\stream-net-tests.dll" -output:coverage.xml
+    C:\Users\appveyor\.nuget\packages\coveralls.io.1.4.1\tools\coveralls.net.exe --opencover coverage.xml
+on_finish:
+- ps: >-
+    $wc = New-Object 'System.Net.WebClient'
+    $wc.UploadFile("https://ci.appveyor.com/api/testresults/nunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\TestResult.xml))
