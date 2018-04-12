@@ -77,7 +77,16 @@ namespace Stream
                 case StreamApiLocation.EUCentral:
                     region = "eu-central";
                     break;
-                default:
+				case StreamApiLocation.EUWest:
+					region = "dublin";
+					break;
+				case StreamApiLocation.AsiaSingapore:
+					region = "singapore";
+					break;
+				case StreamApiLocation.AsiaTokyo:
+					region = "tokyo";
+					break;
+				default:
                     break;
             }
             return new Uri(string.Format(BaseUrlFormat, region));

@@ -5,8 +5,11 @@ namespace Stream
     {
         USEast,
         USWest,
-        EUCentral
-    }
+        EUCentral,
+		EUWest,
+		AsiaSingapore,
+		AsiaTokyo
+	}
 
     public class StreamClientOptions
     {
